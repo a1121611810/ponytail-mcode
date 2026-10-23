@@ -61,6 +61,8 @@ Ponytail 的做法是：写代码之前先在"必要性阶梯"上停在够用的
 cp AGENTS.md /path/to/your/project/
 ```
 
+> 常驻这条路径在**桌面端（MiniMax Code）已验证**：项目根的 `AGENTS.md` 会被读作项目指令。**云端（MiniMax Agent）是否读取未经验证**——官方文档没有对应说明，云端可能只能靠 Agent 语义匹配选中本 Skill。
+
 ## 六个 Skill
 
 - **`ponytail`** — 极简模式本体。写代码前先列清楚这次改动必须触及哪些位置，然后走必要性阶梯，最后在回复结尾说明跳过了什么、有什么风险。

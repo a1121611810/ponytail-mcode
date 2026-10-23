@@ -16,6 +16,8 @@ description: >
 git grep --no-index --exclude-standard -nE '(#|//|/[*]) ?(shortcut|ponytail):'
 ```
 
+沙箱里没有 `git` 时改用 `grep -rnE --exclude-dir=.git --exclude-dir=node_modules '(#|//|/[*]) ?(shortcut|ponytail):'`，并按项目技术栈补上要排除的依赖目录。
+
 如果项目用的技术栈有别的注释前缀，把它们补进上面的正则。如果用户指定了自己的标记词（例如 `ponytail-debt TODO`），就改成 grep 那个词。
 
 每一条命中就是台账的一行。带上注释前缀，可以把只是提到这个约定、但并不是真的推迟的文字排除在外。跳过那些不是推迟的命中，比如讲快捷键的说明。
